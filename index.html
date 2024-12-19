@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Password to Access the Protected Page</h1>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Submit</button>
+
+    <script>
+        function checkPassword() {
+            // Define the correct password
+            const correctPassword = "B4LL5";
+
+            // Get the entered password
+            const enteredPassword = document.getElementById("password").value;
+
+            // Check if it matches
+            if (enteredPassword === correctPassword) {
+                // Redirect to the protected page
+                window.location.href = "protected.html";
+            } else {
+                alert("Incorrect password. Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
